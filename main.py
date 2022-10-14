@@ -9,16 +9,16 @@ from scipy import stats as stats
 """
 
 # slider
-lower_quartil = st.slider('Untere Grenze', -3.0, 3.0, 0.01)
-upper_quartil = st.slider('Obere Grenze', -3.0, 3.0, 0.01)
+lower_quantil = st.slider('Untere Grenze', -3.0, 3.0, 0.01)
+upper_quantil = st.slider('Obere Grenze', -3.0, 3.0, 0.01)
 
-p = stats.norm(0, 1).cdf(upper_quartil) - stats.norm(0, 1).cdf(lower_quartil)
+p = stats.norm(0, 1).cdf(upper_quantil) - stats.norm(0, 1).cdf(lower_quantil)
 
 # data for normal distribution
 x = np.linspace(-3, 3, 1000)
 N_10 = stats.norm(0, 1)
-area = np.arange(lower_quartil,
-                 upper_quartil,
+area = np.arange(lower_quantil,
+                 upper_quantil,
                  .001)
 
 # plot
