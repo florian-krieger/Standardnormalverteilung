@@ -55,6 +55,11 @@ ax.plot(x, N_10.pdf(x), '#FF4C4F')
 ax.fill_between(area,
                 N_10.pdf(area),
                 color='#FFB5B6')
+
+plt.xlabel("z-Wert")
+plt.ylabel("Wahrscheinlichkeitsdichte")
+plt.yticks([])
+
 st.pyplot(fig)
 
 st.write("Wahrscheinlichkeit ist: **{:.2f}**".format(p))
